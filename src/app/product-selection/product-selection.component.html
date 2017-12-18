@@ -1,0 +1,20 @@
+<h2>My Heroes</h2>
+
+<ul class="logs">
+  <li *ngFor="let log of logList" [class.log-selected]="log === selected" (click)="onSelect(log)">
+    <span class="badge">{{log.id}}</span> {{log.dateTimeLog}}
+  </li>
+</ul>
+
+<div *ngIf="selected">
+  
+    <h2>{{ selected.dateTimeLog | uppercase }} Details</h2>
+    <div>
+      <span>id: </span>{{selected.id}}</div>
+    <div>
+      <label>selected-id:
+        <input [(ngModel)]="selected.id" placeholder="id">
+      </label>
+    </div>
+    
+  </div>
