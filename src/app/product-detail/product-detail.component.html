@@ -1,0 +1,12 @@
+<div *ngIf="log">
+
+  <p>{{ log.dateTimeLog | uppercase }} Details</p>
+  <div>
+    <span>id: </span>{{log.id}}</div>
+  <div>
+    <label>log-id:
+      <input [(ngModel)]="log.id" placeholder="id">
+    </label>
+  </div>
+
+</div>

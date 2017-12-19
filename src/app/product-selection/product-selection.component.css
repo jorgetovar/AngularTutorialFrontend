@@ -4,10 +4,10 @@
 }
 
 .logs {
-    margin: 0 0 10em 0;
+    margin: 0 0 3em 0;
     list-style-type: none;
     padding: 0;
-    width: 15em; 
+    width: 15em;
 }
 
 .logs li {

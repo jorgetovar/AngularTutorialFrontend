@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Product } from '../product';
-import { Log } from '../log';
-import { LOG_LIST } from '../log-const';
+import {Component, OnInit} from '@angular/core';
+import {Product} from '../product';
+import {Log} from '../log';
+import {MOCK_LIST} from '../mock-list';
+import {LogProviderService} from '../log-provider.service';
 
 @Component({
   selector: 'app-product-selection',
@@ -15,13 +16,20 @@ export class ProductSelectionComponent implements OnInit {
     name: 'product1'
   };
 
-  logList: Log[] = LOG_LIST;
+  logList: Log[];
+
 
   selected: Log;
 
-  constructor() { }
+  constructor(private logProviderService: LogProviderService) {
+  }
 
   ngOnInit() {
+    this.getLogs();
+  }
+
+  getLogs(): void {
+    this.logProviderService.getLogs().subscribe(logs => this.logList = logs);
   }
 
   onSelect(log: Log): void {

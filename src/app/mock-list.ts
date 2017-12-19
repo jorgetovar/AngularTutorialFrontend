@@ -1,6 +1,6 @@
 import { Log } from './log';
 
-export const LOG_LIST: Log[] = [
+export const MOCK_LIST: Log[] = [
     {
         'id': 1,
         'dateLog': '2017-12-08',
@@ -10,16 +10,6 @@ export const LOG_LIST: Log[] = [
         'id': 2,
         'dateLog': '1991-06-21',
         'dateTimeLog': '2017-12-08 18:40:30'
-    },
-    {
-        'id': 3,
-        'dateLog': '1991-06-22',
-        'dateTimeLog': '2017-12-08 18:41:13'
-    },
-    {
-        'id': 4,
-        'dateLog': '1991-06-23',
-        'dateTimeLog': '2017-12-08 18:51:29'
     },
     {
         'id': 5,

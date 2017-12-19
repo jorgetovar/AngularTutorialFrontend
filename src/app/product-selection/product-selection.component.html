@@ -6,15 +6,4 @@
   </li>
 </ul>
 
-<div *ngIf="selected">
-  
-    <h2>{{ selected.dateTimeLog | uppercase }} Details</h2>
-    <div>
-      <span>id: </span>{{selected.id}}</div>
-    <div>
-      <label>selected-id:
-        <input [(ngModel)]="selected.id" placeholder="id">
-      </label>
-    </div>
-    
-  </div>
+<app-product-detail [log]="selected"></app-product-detail>
