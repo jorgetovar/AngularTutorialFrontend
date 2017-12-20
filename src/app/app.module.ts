@@ -6,8 +6,10 @@ import {AppComponent} from './app.component';
 import {ProductSelectionComponent} from './product-selection/product-selection.component';
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {LogProviderService} from './log-provider.service';
-import { MessagesComponent } from './messages/messages.component';
-import { MessageService } from './message.service';
+import {MessagesComponent} from './messages/messages.component';
+import {MessageService} from './message.service';
+import {AppRoutingModule} from './/app-routing.module';
+import {BdbRouteProviderService} from './bdb-route-provider.service';
 
 
 @NgModule({
@@ -19,9 +21,10 @@ import { MessageService } from './message.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [LogProviderService, MessageService],
+  providers: [LogProviderService, MessageService, BdbRouteProviderService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
